@@ -29,10 +29,10 @@ Node* MergeLists(Node *head1, Node* head2)
         }
 
         
-        Node* nextB = headB->next;
-        headB->next = headA->next;
-        headA->next = headB;
-        headB = nextB;
+        Node* next2 = head2->next;
+        head2->next = head1->next;
+        head1->next = head2;
+        head2 = next2;
     }
 
     return listHead;
